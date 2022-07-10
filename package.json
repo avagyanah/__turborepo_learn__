@@ -1,0 +1,42 @@
+{
+  "name": "root",
+  "version": "4.0.0",
+  "author": "https://github.com/armathai",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "deploy": "turbo run deploy",
+    "build:core": "npm run --workspace=@armathai/grid-core build",
+    "test:core": "npm run --workspace=@armathai/grid-core test",
+    "lint:core": "npm run --workspace=@armathai/grid-core lint",
+    "prepublish:core": "npm run --workspace=@armathai/grid-core prepublish",
+    "build:pixi": "npm run --workspace=@armathai/pixi-grid build",
+    "test:pixi": "npm run --workspace=@armathai/pixi-grid test",
+    "lint:pixi": "npm run --workspace=@armathai/pixi-grid lint",
+    "prepublish:pixi": "npm run --workspace=@armathai/pixi-grid prepublish",
+    "start:example": "npm run --workspace=@armathai/example start"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-types": "^2.6.2",
+    "@types/jest": "^26.0.19",
+    "@typescript-eslint/eslint-plugin": "^5.14.0",
+    "@typescript-eslint/parser": "^5.14.0",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.2",
+    "prettier": "2.5.1",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.5",
+    "turbo": "^1.3.1",
+    "typescript": "^4.7.4"
+  }
+}
