@@ -1,23 +1,15 @@
 {
   "name": "root",
-  "version": "4.0.0",
+  "version": "1.0.3",
   "author": "https://github.com/armathai",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "test": "turbo run test",
-    "lint": "turbo run lint",
-    "deploy": "turbo run deploy",
-    "build:core": "npm run --workspace=@armathai/grid-core build",
-    "test:core": "npm run --workspace=@armathai/grid-core test",
-    "lint:core": "npm run --workspace=@armathai/grid-core lint",
-    "prepublish:core": "npm run --workspace=@armathai/grid-core prepublish",
-    "build:pixi": "npm run --workspace=@armathai/pixi-grid build",
-    "test:pixi": "npm run --workspace=@armathai/pixi-grid test",
-    "lint:pixi": "npm run --workspace=@armathai/pixi-grid lint",
-    "prepublish:pixi": "npm run --workspace=@armathai/pixi-grid prepublish",
-    "start:example": "npm run --workspace=@armathai/example start"
+    "start": "turbo run start --filter=lego-example",
+    "build": "turbo run build --filter=!lego-example",
+    "test": "turbo run test --filter=!lego-example",
+    "lint": "turbo run lint --filter=!lego-example",
+    "prepublish": "turbo run prepublish --filter=!lego-example --concurrency=1"
   },
   "workspaces": {
     "packages": [
@@ -25,7 +17,6 @@
     ]
   },
   "devDependencies": {
-    "@parcel/transformer-typescript-types": "^2.6.2",
     "@types/jest": "^26.0.19",
     "@typescript-eslint/eslint-plugin": "^5.14.0",
     "@typescript-eslint/parser": "^5.14.0",

@@ -1,0 +1,18 @@
+{
+  "name": "@armathai/lego-example",
+  "version": "1.0.3",
+  "license": "MIT",
+  "source": "index.html",
+  "main": "dist/index.js",
+  "author": "https://github.com/armathai",
+  "description": "Example for Lego",
+  "scripts": {
+    "start": "rimraf dist && parcel --port 8080"
+  },
+  "dependencies": {
+    "@armathai/lego": "*"
+  },
+  "devDependencies": {
+    "parcel": "^2.6.2"
+  }
+}
