@@ -1,26 +1,26 @@
 {
-  "extends": "../../tsconfig.json",
+    "extends": "../../tsconfig.json",
 
-  "references": [{ "path": "../lego" }],
+    "references": [{ "path": "../lego" }],
 
-  "include": ["src"],
-  "exclude": [],
+    "include": ["src"],
+    "exclude": [],
 
-  "compilerOptions": {
-    "strict": true,
+    "compilerOptions": {
+        "strict": false,
 
-    "baseUrl": ".",
-    "rootDir": "./src",
-    "outDir": "./dist",
+        "baseUrl": ".",
+        "rootDir": "./src",
+        "outDir": "./dist",
 
-    "target": "ES6",
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
+        "target": "ES6",
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
 
-    "allowJs": true,
+        "allowJs": true,
 
-    "declaration": true,
-    "removeComments": true
-  }
+        "declaration": true,
+        "removeComments": true
+    }
 }
