@@ -8,6 +8,7 @@
 !**/.prettierignore
 !.github
 !.gitkeep
+!.changeset
 
 # ignore yarn plug'n'play file
 .pnp.*
